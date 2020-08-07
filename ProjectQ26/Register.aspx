@@ -117,9 +117,12 @@
         var onloadCallback = function () {
 
             grecaptcha.render('example3', {
-                //'sitekey': '6Lciv6UUAAAAALv0nGbMW2MR21imr9lQyPLtjcN4',
+                //Usar en LocalHost
+                'sitekey': '6Lciv6UUAAAAALv0nGbMW2MR21imr9lQyPLtjcN4',
                 //'sitekey': '6LezoLsZAAAAAPr-PJdTfjvXuDzwugotreOqm8kN',
-                'sitekey': '6LdLpLsZAAAAANcwCppW1Bdo28dkkdxMOZ2EUQRA',
+
+                // Usar en Hosting
+                //'sitekey': '6LdLpLsZAAAAANcwCppW1Bdo28dkkdxMOZ2EUQRA',
                 'callback': verifyCallback,
             });
         };
