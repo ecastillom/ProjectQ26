@@ -13,6 +13,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <link rel="icon" href="img/q12-16.png" />
 </head>
 <body class="bg-gradient-dark">
     <form id="form1" runat="server">

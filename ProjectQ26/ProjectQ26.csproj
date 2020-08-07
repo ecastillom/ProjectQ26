@@ -170,6 +170,7 @@
     <Content Include="Images\LigaMx\Unam.png" />
     <Content Include="Images\LigaPremier\Premier.png" />
     <Content Include="img\profile.png" />
+    <Content Include="img\q12-16.png" />
     <Content Include="img\q12.png" />
     <Content Include="img\q12Login-2.png" />
     <Content Include="img\q12_old.png" />
