@@ -51,69 +51,7 @@
             </div>
         </div>
         <!-- /.modal -->
-
-        <%--<div class="modal fade bs-example-modal-lg" id="modalQuinielaDetalles" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-            <div class="modal-dialog" role="document">
-                <asp:UpdatePanel ID="updateModalDetallesQuiniela" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <asp:Label runat="server" ID="lblTittleModalDetalle" CssClass="h4 modal-title" Text="Detalle Quiniela"></asp:Label>
-                            </div>
-                            <div class="modal-body">
-                                <asp:Label ID="lblQuinielaNoDetalle" runat="server" Text="Quiniela No:" Font-Bold="true" Font-Size="Medium"></asp:Label>
-                                <asp:TextBox ID="txtQuinielaNoDetalle" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
-                            </div>
-                            <div class="modal-body">
-                                <div class="table-responsive">
-                                    <asp:UpdatePanel ID="UpdatePanelModalDetalle" runat="server" UpdateMode="Conditional">
-                                        <ContentTemplate>
-                                            <asp:GridView ID="gridQuinielaModalDetalle" runat="server" CssClass="TableNewModal100" AutoGenerateColumns="false"
-                                                DataKeyNames="idPartido" HorizontalAlign="Center"
-                                                EnableModelValidation="True" OnRowDataBound="gridQuinielaModalDetalle_RowDataBound">
-
-                                                <Columns>
-                                                    <asp:BoundField ReadOnly="true" HeaderText="No" DataField="idPartido" Visible="false"></asp:BoundField>
-                                                    <asp:BoundField ReadOnly="true" HeaderText="Fecha" DataField="PartidoDate"></asp:BoundField>
-
-                                                    
-                                                    <asp:BoundField ReadOnly="true" HeaderText="L" DataField="EquipoLocalShort"></asp:BoundField>
-                                                    <asp:TemplateField ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
-                                                        <ItemTemplate>
-                                                            <asp:Image runat="server" ID="imgLocal" Width="25px" Height="25px" />
-                                                        </ItemTemplate>
-                                                    </asp:TemplateField>
-                                                    <asp:BoundField ReadOnly="true" HeaderText="idGolesLocal" DataField="idGolesLocal" Visible="false"></asp:BoundField>
-                                                    <asp:BoundField ReadOnly="true" HeaderText="GL" DataField="GolesLocal" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center"></asp:BoundField>
-
-                                                    <asp:BoundField ReadOnly="true" HeaderText="idGolesVisitante" DataField="idGolesVisitante" Visible="false"></asp:BoundField>
-                                                    <asp:BoundField ReadOnly="true" HeaderText="GV" DataField="GolesVisitante" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center"></asp:BoundField>
-                                                    <asp:TemplateField ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle">
-                                                        <ItemTemplate>
-                                                            <asp:Image runat="server" ID="imgVisita" Width="25px" Height="25px" />
-                                                        </ItemTemplate>
-                                                    </asp:TemplateField>
-                                                    <asp:BoundField ReadOnly="true" DataField="EquipoVisitanteShort" HeaderText="V" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField ReadOnly="true" DataField="idResultado" HeaderText="idResultado" Visible="false"></asp:BoundField>
-                                                    <asp:BoundField ReadOnly="true" DataField="ResultadoNameShort" HeaderText="Resultado" ItemStyle-HorizontalAlign="Center"></asp:BoundField>
-                                                </Columns>
-
-                                            </asp:GridView>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-                                    <br />
-                                    <br />
-                                    <asp:Label ID="lblMsgModalDetalles" runat="server" Font-Bold="true"></asp:Label>
-                                </div>
-                                <div class="modal-footer">
-                                    <asp:Button runat="server" ID="btnCloseDetalles" CssClass="btn btn-danger" OnClick="btnCloseDetalles_Click" Text="Cerrar" />
-                                </div>
-                            </div>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </div>
-        </div>--%>
-
+        
         <!-- .modal -->
         <div class="modal fade bs-example-modal-lg" id="modalQuinielaCalcularConfirm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
             <div class="modal-dialog" role="document">
@@ -341,78 +279,6 @@
             </div>
         </div>
 
-        <!-- .modal -->
-        <%--<div class="modal fade bs-example-modal-lg" id="modalQuinielaEdit" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-            <div class="modal-dialog" role="document">
-                <asp:UpdatePanel ID="updateModalEditQuiniela" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <asp:Label runat="server" ID="lblTitleModalEdit" CssClass="h4 modal-title" Text="Actualizar Quiniela"></asp:Label>
-                            </div>
-                            <div class="modal-body">
-                                
-                                <asp:Label ID="lblQuinielaEdit" runat="server" Text="Quiniela No:" Font-Bold="true" Font-Size="Medium"></asp:Label>
-                                <asp:TextBox ID="txtQuinielaEdit" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
-
-                                <asp:Label ID="lblResultadoEdit" runat="server" Text="Resultado:" Font-Bold="true" Font-Size="Medium"></asp:Label>
-                                <asp:DropDownList ID="ddlResultadoEdit" runat="server" CssClass="form-control"></asp:DropDownList>
-
-                                <asp:Label ID="lblLocalEdit" runat="server" Text="Local:" Font-Bold="true" Font-Size="Medium"></asp:Label>
-                                <asp:TextBox ID="txtLocalEdit" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
-
-                                <asp:Label ID="lblGolesLocalEdit" runat="server" Text="Goles Local:" Font-Bold="true" Font-Size="Medium"></asp:Label>
-                                <asp:DropDownList ID="ddlGolesLocalEdit" runat="server" CssClass="form-control"></asp:DropDownList>
-                                
-                                <asp:Label ID="lblVisitaEdit" runat="server" Text="Visita:" Font-Bold="true" Font-Size="Medium"></asp:Label>
-                                <asp:TextBox ID="txtVisitaEdit" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
-
-                                <asp:Label ID="lblGolesVisitanteEdit" runat="server" Text="Goles Visitante:" Font-Bold="true" Font-Size="Medium"></asp:Label>
-                                <asp:DropDownList ID="ddlGolesVisitanteEdit" runat="server" CssClass="form-control"></asp:DropDownList>
-                                <br />
-                                <br />
-                                <asp:Label ID="lblMsgModalEdit" runat="server" Font-Bold="true"></asp:Label>
-                            </div>
-                            <div class="modal-footer">
-
-                                <asp:Button runat="server" ID="btnAcceptQuinielaEdit" CssClass="btn btn-primary" OnClick="btnAcceptQuinielaEdit_Click" Text="Aceptar" />
-                                <asp:Button runat="server" ID="btnCloseQuinielaEdit" CssClass="btn btn-danger" OnClick="btnCloseQuinielaEdit_Click" Text="Cerrar" />
-                            </div>
-                        </div>
-                    </ContentTemplate>
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="btnAcceptQuinielaEdit" EventName="Click" />
-                    </Triggers>
-                </asp:UpdatePanel>
-            </div>
-        </div>--%>
-        <!-- /.modal -->
-
-
-        <!-- .modal -->
-        <%--<div class="modal fade bs-example-modal-lg" id="modalQuinielaEditConfirm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-            <div class="modal-dialog" role="document">
-                <asp:UpdatePanel ID="updateModalEditQuinielaConfirm" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <asp:Label runat="server" ID="Label1" CssClass="h4 modal-title">
-                                    Estas seguro de guardar el resultado? 
-                                </asp:Label>                              
-                            </div>
-                            <div class="modal-footer">
-                                <asp:Button runat="server" ID="btnAcceptQuinielaEditConfirm" CssClass="btn btn-primary" OnClick="btnAcceptQuinielaEditConfirm_Click" Text="Aceptar" />
-                                <asp:Button runat="server" ID="btnCloseQuinielaEditConfirm" CssClass="btn btn-danger" OnClick="btnCloseQuinielaEditConfirm_Click" Text="Cerrar" />
-                            </div>
-                        </div>
-                    </ContentTemplate>
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="btnAcceptQuinielaEditConfirm" EventName="Click" />
-                    </Triggers>
-                </asp:UpdatePanel>
-            </div>
-        </div>--%>
-        <!-- /.modal -->
     </div>
 
     <asp:UpdatePanel ID="updPnlFiltros" runat="server" UpdateMode="Conditional">

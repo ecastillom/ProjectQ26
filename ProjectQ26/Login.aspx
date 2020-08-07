@@ -95,7 +95,7 @@
 
             grecaptcha.render('example3', {
                 //Usar en LocalHost
-                sitekey': '6Lciv6UUAAAAALv0nGbMW2MR21imr9lQyPLtjcN4',
+                'sitekey': '6Lciv6UUAAAAALv0nGbMW2MR21imr9lQyPLtjcN4',
                 //'sitekey': '6LezoLsZAAAAAPr-PJdTfjvXuDzwugotreOqm8kN',
 
                 // Usar en Hosting
