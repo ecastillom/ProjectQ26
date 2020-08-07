@@ -10864,6 +10864,21 @@ form.user .btn-user {
         line-height: 1.5;
     }
 
+
+.TableNewModal100 {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+    .TableNewModal100 th {
+        background-color: #4e73df;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
 @-webkit-keyframes noise-anim {
     0% {
         clip: rect(32px,9999px,16px,0)

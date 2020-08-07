@@ -81,23 +81,6 @@ namespace ProjectQ26
 
                 MenuLinks();
             }
-            
-            //String path = Request.Url.PathAndQuery.ToUpperInvariant();
-            //bool restrictedArea = true;
-
-            //if (!(new String[] { "DEFAULT", "MENU" }).Any(s => path.Contains(s)))
-            //{
-
-            //    if (!String.IsNullOrEmpty(empleado.rol) && (new String[] { "ADMIN", "SYS" }).Any(s => empleado.rol.Contains(s)))
-            //        restrictedArea = false;
-            //    else if ("FACT".Equals(empleado.rol) && (new String[] { "FACTURACION", "PAGOS" }).Any(s => path.Contains(s)))
-            //        restrictedArea = false;
-
-
-            //    if (restrictedArea)
-            //        Response.Redirect("~/Autenticados/Dashboard.aspx");
-
-            //}
         }
 
         protected void btnLogOut_Click(object sender, EventArgs e)
@@ -115,13 +98,8 @@ namespace ProjectQ26
             hLnkPremier.NavigateUrl = "QuinielasGeneral.aspx?idSport=" + StringCipher.Encrypt("1") + "&idLiga=" + StringCipher.Encrypt("3");
             hLnkPremier.NavigateUrl = "QuinielasGeneral.aspx?idSport=" + StringCipher.Encrypt("1") + "&idLiga=" + StringCipher.Encrypt("3");
             hLnkPartidos.NavigateUrl = "Partidos.aspx";
-            //hLnKQuinielas.NavigateUrl = "Quinielas.aspx";
-            //hLnkCalcular.NavigateUrl = "Calcular.aspx";
+            hLnKQuinielas.NavigateUrl = "Quinielas.aspx";
         }
 
-        protected void btnLigaMx_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

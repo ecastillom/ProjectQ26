@@ -108,8 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="404.html" />
-    <Content Include="blank.html" />
+    <Content Include="Boletos.aspx" />
     <Content Include="bootstrap\css\bootstrap-theme.css" />
     <Content Include="bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="bootstrap\css\bootstrap.css" />
@@ -118,9 +117,6 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\npm.js" />
-    <Content Include="buttons.html" />
-    <Content Include="cards.html" />
-    <Content Include="charts.html" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -131,7 +127,6 @@
     <Content Include="DashBoard.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="forgot-password.html" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -180,7 +175,6 @@
     <Content Include="img\q12_old.png" />
     <Content Include="img\q26Login.png" />
     <Content Include="img\undraw_posting_photo.svg" />
-    <Content Include="index.html" />
     <Content Include="JavaScript.htm" />
     <Content Include="js\demo\chart-area-demo.js" />
     <Content Include="js\demo\chart-bar-demo.js" />
@@ -232,6 +226,8 @@
     <Content Include="Partidos.aspx" />
     <Content Include="plugins\jQuery\jquery-2.2.3.min.js" />
     <Content Include="plugins\jQuery\jquery-3.1.1.min.js" />
+    <Content Include="QuinielaPlayers.aspx" />
+    <Content Include="Quinielas.aspx" />
     <Content Include="QuinielasGeneral.aspx" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
@@ -255,14 +251,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Login.aspx" />
-    <Content Include="login.html" />
     <Content Include="Register.aspx" />
-    <Content Include="register.html" />
-    <Content Include="tables.html" />
-    <Content Include="utilities-animation.html" />
-    <Content Include="utilities-border.html" />
-    <Content Include="utilities-color.html" />
-    <Content Include="utilities-other.html" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.js" />
@@ -2029,6 +2018,13 @@
     <Content Include="MasterPrincipal.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boletos.aspx.cs">
+      <DependentUpon>Boletos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Boletos.aspx.designer.cs">
+      <DependentUpon>Boletos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Class\Equipo\DB_Equipo.cs" />
     <Compile Include="Clases\Class\Goles\DB_Gol.cs" />
     <Compile Include="Clases\Class\Goles\Gol.cs" />
@@ -2083,6 +2079,20 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Class\Quiniela\Quiniela.cs" />
+    <Compile Include="QuinielaPlayers.aspx.cs">
+      <DependentUpon>QuinielaPlayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuinielaPlayers.aspx.designer.cs">
+      <DependentUpon>QuinielaPlayers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quinielas.aspx.cs">
+      <DependentUpon>Quinielas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quinielas.aspx.designer.cs">
+      <DependentUpon>Quinielas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="QuinielasGeneral.aspx.cs">
       <DependentUpon>QuinielasGeneral.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2109,6 +2119,7 @@
     <None Include="packages.config" />
     <Content Include="js\jquery-3.4.1.slim.min.map" />
     <Content Include="js\jquery-3.4.1.min.map" />
+    <None Include="Properties\PublishProfiles\Q26_Publish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

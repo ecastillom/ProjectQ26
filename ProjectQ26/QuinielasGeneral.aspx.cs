@@ -29,7 +29,22 @@ namespace ProjectQ26
         {
             DataQuiniela = DB_Quiniela.getQuinielaData(idSportPar, idLigaPar);
 
-            lblTitleQuinielas.Text = "Quiniela : " + DataQuiniela.QuinielaNo;
+            if (DataQuiniela.idStatus == 3)
+            {
+                lblTitleQuinielas.Text = "Quiniela : " + DataQuiniela.QuinielaNo + " (EN PROCESO)";
+                btnAddQuiniela.Enabled = false;
+            }
+            else if (DataQuiniela.idStatus == 6)
+            {
+                lblTitleQuinielas.Text = "Quiniela : " + DataQuiniela.QuinielaNo + " (Cerrada)";
+                btnAddQuiniela.Enabled = false;
+            }
+            else
+            {
+                lblTitleQuinielas.Text = "Quiniela : " + DataQuiniela.QuinielaNo;
+                btnAddQuiniela.Enabled = true;
+            }
+
             idQuinielaHidden.Value = DataQuiniela.idQuiniela.ToString();
 
             lblLigaName.Text = DataQuiniela.LigaName + " - " + DataQuiniela.TorneoName;
@@ -58,7 +73,15 @@ namespace ProjectQ26
             {
                 (e.Row.FindControl("imgLocal") as Image).ImageUrl = DataQuielaList[e.Row.RowIndex].EquipoLocalImgURL;
                 (e.Row.FindControl("imgVisita") as Image).ImageUrl = DataQuielaList[e.Row.RowIndex].EquipoVisitanteImgURL;
+
+                RadioButtonList rdbOpcion = e.Row.FindControl("rdbOpcion") as RadioButtonList;
+
+                if ((DataQuiniela.idStatus == 3) || (DataQuiniela.idStatus == 6))
+                {
+                    rdbOpcion.Enabled = false;
+                }
             }
+
         }
 
         protected void gridQuinielaModal_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -67,6 +90,7 @@ namespace ProjectQ26
             {
                 (e.Row.FindControl("imgLocal") as Image).ImageUrl = DataQuielaList[e.Row.RowIndex].EquipoLocalImgURL;
                 (e.Row.FindControl("imgVisita") as Image).ImageUrl = DataQuielaList[e.Row.RowIndex].EquipoVisitanteImgURL;
+                
             }
         }
 
@@ -198,7 +222,7 @@ namespace ProjectQ26
 
         protected void btnBoletos_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Boletos.aspx");
         }
 
 

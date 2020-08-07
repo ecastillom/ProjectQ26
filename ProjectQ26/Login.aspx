@@ -12,6 +12,7 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
 </head>
+
 <body class="bg-gradient-dark">
     <form id="form1" runat="server">
         <asp:HiddenField runat="server" ID="hiddenValue" />
@@ -39,7 +40,7 @@
                                             <div class="form-group">
                                                 <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control form-control-user" placeholder="Password" TextMode="Password" onkeypress="return noBlankSpace(event);"></asp:TextBox>
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <form action="?" method="POST">
                                                     <div id="example3"></div>
@@ -72,7 +73,7 @@
 
         </div>
     </form>
-
+   
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -93,6 +94,8 @@
 
             grecaptcha.render('example3', {
                 'sitekey': '6Lciv6UUAAAAALv0nGbMW2MR21imr9lQyPLtjcN4',
+                //'sitekey': '6LezoLsZAAAAAPr-PJdTfjvXuDzwugotreOqm8kN',
+                //'sitekey': '6LdLpLsZAAAAANcwCppW1Bdo28dkkdxMOZ2EUQRA',
                 'callback': verifyCallback,
             });
         };

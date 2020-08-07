@@ -96,6 +96,7 @@
         </div>
     </form>
 
+    
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -105,6 +106,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
     <script type="text/javascript">
 
@@ -115,7 +117,9 @@
         var onloadCallback = function () {
 
             grecaptcha.render('example3', {
-                'sitekey': '6Lciv6UUAAAAALv0nGbMW2MR21imr9lQyPLtjcN4',
+                //'sitekey': '6Lciv6UUAAAAALv0nGbMW2MR21imr9lQyPLtjcN4',
+                //'sitekey': '6LezoLsZAAAAAPr-PJdTfjvXuDzwugotreOqm8kN',
+                'sitekey': '6LdLpLsZAAAAANcwCppW1Bdo28dkkdxMOZ2EUQRA',
                 'callback': verifyCallback,
             });
         };
